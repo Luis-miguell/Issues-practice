@@ -1,13 +1,15 @@
 import Card from './components/Card.jsx'
 import Notification from './components/Notification.jsx'
+import Bar from './components/Bar.jsx'
 import './App.css'
 
 export default function App() {
 
   return (
     <>
-        <Card />
+        <Bar />
         <Notification />
+        <Card />
     </>
   )
 }

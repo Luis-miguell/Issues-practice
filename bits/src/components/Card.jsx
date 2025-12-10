@@ -1,7 +1,7 @@
 import '../App.css'
 import imageUser from './imgs/avatar.jpg'
 
-function Card() {
+export default function Card() {
     const name = "Juan Miguel";
     const title = "Desarrollador Frontend";
     const description = "Apasionado por crear experiencias web increíbles y funcionales.";
@@ -25,5 +25,3 @@ function Card() {
     </div>
   );
 }
-
-export default Card;

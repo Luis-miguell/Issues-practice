@@ -1,13 +1,13 @@
-import './App.css'
 import Card from './components/Card.jsx'
+import Notification from './components/Notification.jsx'
+import './App.css'
 
-function App() {
+export default function App() {
 
   return (
     <>
         <Card />
+        <Notification />
     </>
   )
 }
-
-export default App

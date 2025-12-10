@@ -1,3 +1,6 @@
+/* ================================ 
+    Global Styles
+   ================================ */
 body {
   margin: 0;
   padding: 40px;
@@ -9,6 +12,9 @@ body {
   overflow: hidden;
 }
 
+/* ================================ 
+    Card Component Styles
+   ================================ */
 .card {
   display: flex;
   gap: 16px;
@@ -80,4 +86,74 @@ body {
   background: transparent;
   color: #0f1724;
   border: 1px solid rgba(15,23,36,0.08);
+}
+/* ================================ 
+    Notification Component Styles
+   ================================ */
+.notifications-wrapper {
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  width: 320px;
+  z-index: 9999;
+  font-family: sans-serif;
+}
+
+.notifications-controls {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-simulate {
+  background-color: #2d89ff;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.notification {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  padding: 10px;
+  overflow: hidden;
+  animation: slideIn 220ms ease;
+}
+
+.notification__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.notification__app {
+  font-size: 14px;
+}
+
+.notification__close {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.notification__body {
+  font-size: 13px;
+  color: #333;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-6px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }

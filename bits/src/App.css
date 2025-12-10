@@ -12,6 +12,11 @@ body {
   overflow: hidden;
 }
 
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
 /* ================================ 
     Card Component Styles
    ================================ */
@@ -25,7 +30,7 @@ body {
   background: linear-gradient(180deg,#ffffff 0%, #f7f9fc 100%);
   box-shadow: 0 6px 18px rgba(20,30,60,0.08);
   border: 1px solid rgba(20,30,60,0.04);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  corner-shape: notch;
 }
 
 .card__avatar {
@@ -96,7 +101,6 @@ body {
   top: 16px;
   width: 320px;
   z-index: 9999;
-  font-family: sans-serif;
 }
 
 .notifications-controls {
@@ -106,7 +110,7 @@ body {
 }
 
 .btn-simulate {
-  background-color: #2d89ff;
+  background-color: #0ea5a4;
   color: white;
   border: none;
   padding: 6px 10px;
@@ -121,12 +125,16 @@ body {
 }
 
 .notification {
-  background: #fff;
+  background: transparent;
+  color: #0f1724;
+  border: 1px solid rgba(15,23,36,0.08);
+  backdrop-filter: blur(12px);
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   padding: 10px;
   overflow: hidden;
   animation: slideIn 220ms ease;
+  corner-shape: notch;
 }
 
 .notification__header {
@@ -156,4 +164,50 @@ body {
 @keyframes slideIn {
   from { transform: translateY(-6px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
+}
+/* ================================ 
+    Bar Component Styles
+   ================================ */
+
+.bar {
+  position: fixed;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  width: auto;
+  padding: 16px;
+  corner-shape: scoop;
+  border-radius: 12px;
+  background: linear-gradient(180deg,#ffffff 0%, #f7f9fc 100%);
+  box-shadow: 0 6px 18px rgba(20,30,60,0.08);
+  border: 1px solid rgba(20,30,60,0.04);
+}
+
+.bar__links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bar__links a {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 0.88rem;
+  text-decoration: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #0f1724;
+  border: 1px solid rgba(15,23,36,0.08);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.bar__links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(14,165,164,0.12);
 }
